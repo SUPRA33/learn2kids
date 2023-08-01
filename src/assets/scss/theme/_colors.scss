@@ -1,0 +1,33 @@
+#colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .colors-container {
+        display: flex;
+        padding-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .object-container {
+        margin: 5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #colors {
+        .object-container {
+            margin: 3rem 0;
+            img {
+                height: 25vh;
+                max-width: 80vw;
+                object-fit: contain;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    height: 100vh;
+    background-color: $blue;
+}
+
+h1 {
+    color: $blue;
+    font-size: 5rem;
+    text-align: center;
+    font-family: $titleFont;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 3.5rem
+    }
+}
