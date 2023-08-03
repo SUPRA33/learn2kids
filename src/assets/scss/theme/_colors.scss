@@ -9,6 +9,7 @@
         padding-top: 1rem;
         flex-wrap: wrap;
         justify-content: center;
+        margin: 0 0.7rem;
     }
 
     .object-container {
@@ -16,6 +17,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+            max-height: 300px;
+            object-fit: contain;
+        }
     }
 }
 
@@ -24,8 +30,9 @@
         .object-container {
             margin: 3rem 0;
             img {
+                max-width: 60vw;
                 height: 25vh;
-                max-width: 80vw;
+                min-height: 180px;
                 object-fit: contain;
             }
         }

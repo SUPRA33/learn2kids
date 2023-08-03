@@ -10,29 +10,39 @@
     height: auto;
     background-color: $beige;
     min-width: auto;
-    border-radius: 30px;
+    border-radius: 25px;
     border: .5px solid rgba($color: #000000, $alpha: .3);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .box-style:first-child {
+        margin-left: 0.8rem;
+    }
+
+    .box-style:last-child {
+        margin-right: 0.8rem;
+    }
 }
 
 .game-window {
-    height: calc(70vh - 120px);
+    height: auto;
+    min-height: 600px;
     background-color: $beige;
-    min-width: 80vw;
-    border-radius: 30px;
+    width: 90vw;
+    max-width: 1200px;
+    border-radius: 25px;
     border: .5px solid rgba($color: #000000, $alpha: .3);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-    margin: 0 2rem;
+    margin: 0 2rem 2rem 2rem;
 }
 
 .choose-a-game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
+    padding: 2rem 1.5rem 0 1.5rem;
 }
 
 // animation de la flèche "choisis un jeu"
@@ -52,11 +62,10 @@
     animation: bounce 1s infinite;
 }
 
-// défini le style des divs pour tous les boutons dans la fenetre de jeu
+// défini le style des divs pour tous les boutons
 .box-style {
     margin: .4rem .4rem;
-    border: .5px solid rgba($color: #000000, $alpha: .3);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    // border: .5px solid rgba($color: #000000, $alpha: .3);
     border-radius: 10px;
     padding: 35px;
     cursor: pointer;
@@ -65,13 +74,15 @@
     max-width: 65px;
     max-height: 65px;
     position: relative;
-
-    &:first-child,&:last-child {
-        margin-left: 1rem;
-    }
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: transform 0.2s, box-shadow 0.2s;
 
     &:hover {
-        scale: 1.15;
+        transform: translateY(-4px);
+    }
+
+    &:active {
+        box-shadow: inset 0px 6px 12px rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
 
     img {
@@ -89,13 +100,18 @@
     }
 
     .game-window {
-        height: calc(100vh - 220px);
-        margin: 0 1rem;
+        height: auto;
+        min-height: 350px;
+        margin: 0 1rem 1rem 1rem;
     }
     .box-style {
-        max-width: 50px;
-        max-height: 50px;
-        padding: 18px;
+        max-width: 53px;
+        max-height: 53px;
+        padding: 20px;
+
+        &:hover {
+            transform: translateY(0px);
+        }
 
         img {
             max-width: 28px;

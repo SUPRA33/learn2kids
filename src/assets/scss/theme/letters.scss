@@ -1,0 +1,40 @@
+#letters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .letters-container {
+        display: flex;
+        padding-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0.7rem;
+    }
+
+    .letter-selected-container {
+        margin: 5rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-height: 300px;
+            object-fit: contain;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #letters {
+        .letter-selected-container {
+            margin: 3rem 0;
+            img {
+                max-width: 60vw;
+                height: 25vh;
+                min-height: 180px;
+                object-fit: contain;
+            }
+        }
+    }
+}
